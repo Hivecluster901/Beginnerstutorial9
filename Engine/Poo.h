@@ -4,6 +4,7 @@ class Poo
 {
 public:
     void Update();
+    bool IsColliding(int X, int Y, int Width, int Height);
     int x;
     int y;
     int vx;

@@ -1,5 +1,8 @@
 #include "Poo.h"
 #include "Graphics.h"
+#include "Game.h"
+#include "Dude.h"
+
 
 void Poo::Update()
 {
@@ -29,3 +32,23 @@ void Poo::Update()
         vy = -vy;
     }
 }
+
+bool Poo::IsColliding(int X, int Y, int Width, int Height)
+{
+    const int right0 = X + Width;
+    const int bottom0 = Y + Height;
+    const int right1 = x + width;
+    const int bottom1 = y + height;
+
+    
+    if (right0 >= x && X <= right1 && bottom0 >= y && Y <= bottom1)
+    {
+        isEaten = true;
+    }
+
+        return isEaten;
+}
+
+
+
+
