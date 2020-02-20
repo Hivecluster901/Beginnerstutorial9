@@ -1,5 +1,7 @@
 #include "Dude.h"
 #include "Graphics.h"
+#include "MainWindow.h"
+#include "Game.h"
 
 void Dude::Update()
 {

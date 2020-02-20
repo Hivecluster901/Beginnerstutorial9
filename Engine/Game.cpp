@@ -29006,39 +29006,7 @@ void Game::DrawTitleScreen(int x, int y)
     gfx.PutPixel(149 + x, 174 + y, 208, 34, 34);
 
 }
-int Game::ClampScreenX(int x, int width)
-{
-    const int right = x + width;
-    if (x < 0)
-    {
-        return 0;
-    }
-    else if (right >= gfx.ScreenWidth)
-    {
-        return (gfx.ScreenWidth - 1) - width;
-    }
-    else
-    {
-        return x;
-    }
-}
-int Game::ClampScreenY(int y, int height)
-{
-    const int bottom = y + height;
 
-    if (y < 0)
-    {
-        return 0;
-    }
-    else if (bottom >= gfx.ScreenHeight)
-    {
-        return (gfx.ScreenHeight - 1) - height;
-    }
-    else 
-    {
-        return y;
-    }
-}
 bool Game::IsColliding(int x0, int y0, int width0, int height0,
                        int x1, int y1, int width1, int height1)
 {
